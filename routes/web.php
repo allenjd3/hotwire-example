@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RoomsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
+Route::get('dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+Route::middleware('auth')->group(function () {
+    Route::resource('rooms', RoomsController::class);
+});
