@@ -29,7 +29,11 @@ class RoomsController extends Controller
 
     public function show(Room $room)
     {
-        return view('rooms.show', ['room' => $room]);
+        $messages = $room->messages;
+        return view('rooms.show', [
+            'room' => $room,
+            'messages' => $messages,
+        ]);
     }
 
     public function edit(Room $room)

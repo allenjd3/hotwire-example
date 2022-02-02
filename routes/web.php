@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\RoomsController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +27,5 @@ require __DIR__ . '/auth.php';
 
 Route::middleware('auth')->group(function () {
     Route::resource('rooms', RoomsController::class);
+    Route::resource('rooms.messages', MessagesController::class)->except(['index'])->shallow();
 });
