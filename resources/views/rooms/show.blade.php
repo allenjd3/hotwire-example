@@ -16,7 +16,8 @@
                     @endforeach
 
                     <div class="my-2">
-                        <a href="{{ route('rooms.messages.create', $room) }}" class="py-2 px-4 bg-gray-800 text-white">Create New Message</a>
+                        <a href="{{ route('rooms.messages.create', $room) }}" class="py-2 px-4 bg-gray-800 text-white">Create
+                            New Message</a>
                     </div>
                 </div>
             </div>
