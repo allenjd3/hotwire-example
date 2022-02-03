@@ -18,6 +18,8 @@ php artisan migrate:fresh --seed
 php artisan serve
 ```
 
+You can log in using the user admin@admin.com with the password 'password' (Don't share that password!!!)
+
 ### Watch Video 
 
 Watch the video [here](video)- Then come back here for detailed instructions!
